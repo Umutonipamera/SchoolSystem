@@ -13,13 +13,13 @@
         font-size:12px;
         font-weight:normal;
         direction:ltr;
-        background:white;
+        background:purple;
         background-repeat: no-repeat;
         }
      .reg{
         /* margin:10% auto 0 auto; */
-        padding:30px;
-        width:400px;
+        padding:50px;
+        width:500px;
         height:auto;
         overflow:hidden;
         background:white;
@@ -27,12 +27,12 @@
        margin: auto;
               }
     .reg:hover{
-        background:wheat;
+        background:pink;
               }
         button{
              
          background-color: purple;
-         width: 25%;  
+         width: 30%;  
           color: white; 
           font-size: 16px;  
           font-weight: bolder;
@@ -45,7 +45,7 @@
          button:hover {   
           opacity: 0.7; 
           background: none;  
-          border: solid 1px purple;
+           border: solid 3px purple;
           color: black;
       }  
         input{
@@ -53,7 +53,7 @@
                outline: none;
              
                font-size: 15px;
-               padding: 8px 8px;
+               padding: 10px 10px;
                border-radius: 40px;
                transition: all 0.3 ease;
                background-color: white;
@@ -65,15 +65,13 @@
                 width: 100%;
                outline: none;
               font-size: 15px;
-               padding: 8px 8px;
+               padding: 10px 10px;
                border-radius: 40px;
                transition: all 0.3 ease;
                background-color: white;
                border: solid 1px purple;
            }
-           hr{
-              border-top: 1px dashed purple;
-           }
+           
           </style>
 </head>
 <body>
@@ -81,7 +79,7 @@
   
     <div class="reg">
 
-   <center> <h1>Student Edit  Form</h1> </center>
+   <center> <h1>Student Edit Form</h1> </center>
    <hr>
     <form method="POST" enctype="multipart/form-data">
     {%csrf_token%}

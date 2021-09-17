@@ -25,14 +25,14 @@ def course_list(request):
 def edit_course(request, id):
     courses = Courses.objects.get(id=id)
     if request.method == "POST":
-        form = CourseRegistrationForm(request.POST, instance=Course)
+        form = CourseRegistrationForm(request.POST, instance=courses)
         if form.is_valid():
             form.save()
-        else:
-            print(form.errors)
+        return redirect("course_list")
+       
     else:
-        form = CourseRegistrationForm(instance=Courses)     
-    return render(request, "edit_course.htm", {"form":form})       
+        form = CourseRegistrationForm(instance=courses)     
+        return render(request, "edit_course.htm", {"form":form})       
 
 
 def delete_course(request, id):

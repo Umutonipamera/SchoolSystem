@@ -25,13 +25,12 @@ def trainer_list(request):
 def edit_trainer(request, id):
     trainer = Trainer.objects.get(id=id)
     if request.method == "POST":
-        form = TrainerRegistrationForm(request.POST, instance=Trainer)
+        form = TrainerRegistrationForm(request.POST, instance=trainer)
         if form.is_valid():
             form.save()
-        else:
-            print(form.errors)
+        return redirect('trainer_list')
     else:
-        form = TrainerRegistrationForm(instance=Trainer)     
+        form = TrainerRegistrationForm(instance=trainer)     
     return render(request, "edit_trainer.htm", {"form":form})       
 
 def trainer_profile(request, id):

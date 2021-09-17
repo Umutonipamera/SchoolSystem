@@ -9,8 +9,8 @@ class Student(models.Model):
     first_name=models.CharField(max_length=12, null=True)
     last_name=models.CharField(max_length=12, null=True)
     gender_choice=(
-        ('1','Female'),
-        ('2','Male'),
+        ('Female','Female'),
+        ('Male','Male'),
         ('3','Prefer not to say')
     )
     gender=models.CharField(max_length=8,choices=gender_choice, null=True)
@@ -18,9 +18,9 @@ class Student(models.Model):
     date_of_birth=models.DateField(null=True)
     phone_number=models.CharField(max_length=10)
     nationality_choice=(
-        ('1','Rwandan'),
-        ('2','Kenyan'),
-        ('3','Ugandan'),
+        ('Rwandan','Rwandan'),
+        ('Kenyan','Kenyan'),
+        ('Ugandan','Ugandan'),
         ('4','SouthSudanes'),
         ('5','Sudanes')
     )
